@@ -7,5 +7,7 @@ It changes the given input file into the ascii characters and saves the ascii te
 3. In terminal write python change_to_ascii.py --image-path
 
 # Output
+This is the output image:
 
-
+![GitHub Logo](/output.png)
+Format: ![Alt Text](url)
