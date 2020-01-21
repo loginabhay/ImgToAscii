@@ -10,4 +10,3 @@ It changes the given input file into the ascii characters and saves the ascii te
 This is the output image:
 
 ![GitHub Logo](/output.png)
-Format: ![Alt Text](url)
