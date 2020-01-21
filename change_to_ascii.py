@@ -7,12 +7,13 @@ import argparse
 def main():
 	parser = argparse.ArgumentParser(description='Img file')
 	parser.add_argument("-i","--image", type=str, help='Path of the image', default='./img.jpg')
+	parser.add_argument("-itxt","--imageText", type=str, help='text file name to be saved', default='test.txt')
 	args = parser.parse_args()
 
 	img = cv2.imread(args.image,0)
 	width, height = img.shape
 	aspect_ratio = height/width
-	new_width = 90
+	new_width = 94
 	new_height = int(aspect_ratio* new_width* 0.55)
 	res_img = cv2.resize(img,(new_width,new_height))
 	nparr = np.array(res_img)
@@ -25,7 +26,7 @@ def main():
 	ascii_image = "\n".join(ascii_image)
 	print(ascii_image)
 
-	with open('ascii_img.txt','w') as i:
+	with open(args.imageText,'w') as i:
 		i.write(ascii_image)
 		
 if __name__ == "__main__":
